@@ -12,7 +12,7 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-  int _currentIndex = 1;
+  int _currentIndex = 0;
 
   @override
   void initState() {

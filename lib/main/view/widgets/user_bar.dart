@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feed_screen/main/utils/assets.dart';
 import 'package:flutter_feed_screen/main/utils/text_styles.dart';
-import 'package:flutter_svg/svg.dart';
 import 'dart:math' as math;
 
 class UserBar extends StatelessWidget {
@@ -36,16 +34,13 @@ class UserBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(name,style: TextStyles.primaryText),
-                  Text(timestamp,style: TextStyles.tertiaryText),
+                  Text(name, style: TextStyles.primaryText),
+                  Text(timestamp, style: TextStyles.tertiaryText),
                 ],
               ),
             ),
           ]),
         ),
-        Align(
-            alignment: Alignment.centerRight,
-            child: SvgPicture.asset(Assets.bookmark)),
       ],
     );
   }

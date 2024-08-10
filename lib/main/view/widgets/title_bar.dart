@@ -17,6 +17,7 @@ class TitleBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double cWidth = MediaQuery.of(context).size.width * 0.6;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -30,12 +31,16 @@ class TitleBar extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(left: 10),
+              width: cWidth,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title,style: TextStyles.primaryText),
-                  Text(sku,style: TextStyles.tertiaryText),
+                  Text(
+                    title,
+                    style: TextStyles.primaryText,
+                  ),
+                  Text(sku, style: TextStyles.tertiaryText),
                 ],
               ),
             ),

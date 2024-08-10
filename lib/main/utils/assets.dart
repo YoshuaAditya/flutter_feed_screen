@@ -16,4 +16,10 @@ class Assets {
   static const String comment = "assets/icons/comment.svg";
   static const String restaurant = "assets/icons/restaurant.jpg";
   static const String bookmark = "assets/icons/bookmark.svg";
+  static const String search = "assets/icons/search.svg";
+  static const String qrCode = "assets/icons/qr_code.svg";
+  static const String nearby = "assets/icons/nearby.svg";
+  static const String landmark = "assets/icons/landmark.svg";
+  static const String history = "assets/icons/history.svg";
+  static const String forkKnife = "assets/icons/fork_knife.svg";
 }
