@@ -11,4 +11,9 @@ class Assets {
   static const String notificationsGreen = "assets/icons/notifications_green.svg";
   static const String profile = "assets/icons/profile.svg";
   static const String profileGreen = "assets/icons/profile_green.svg";
+  static const String share = "assets/icons/share.svg";
+  static const String like = "assets/icons/like.svg";
+  static const String comment = "assets/icons/comment.svg";
+  static const String restaurant = "assets/icons/restaurant.jpg";
+  static const String bookmark = "assets/icons/bookmark.svg";
 }

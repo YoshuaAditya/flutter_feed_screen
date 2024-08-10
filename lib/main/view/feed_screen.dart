@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/view/widgets/bottom_tab_bar.dart';
+import 'package:flutter_feed_screen/main/view/widgets/content.dart';
 
 import '../utils/constants.dart';
 
@@ -29,9 +30,9 @@ class _FeedScreenState extends State<FeedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          color: Colors.white,
+          color: const Color.fromARGB(255, 113, 113, 113),
           height: double.infinity,
-          child: const Column(),
+          child: const Content(),
         ),
         bottomNavigationBar: _bottomTabBar());
   }
