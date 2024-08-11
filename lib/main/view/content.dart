@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/models/feed.dart';
 import 'package:flutter_feed_screen/main/utils/utils_colors.dart';
@@ -12,7 +10,6 @@ import 'package:flutter_feed_screen/main/view/widgets/title_bar.dart';
 import 'package:flutter_feed_screen/main/view/widgets/user_bar.dart';
 import 'package:flutter_feed_screen/main/viewmodel/product_view_model.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
 class Content extends StatefulWidget {
@@ -54,9 +51,8 @@ class _ContentState extends State<Content> {
   }
 
   Future<void> _handleRefresh() async {
-    setState(() {
-      viewModel.getData();
-    });
+    viewModel.clearProducts();
+    viewModel.getData();
   }
 
   List<Widget> _buildList(List<Product> products) {

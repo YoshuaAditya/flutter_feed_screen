@@ -27,6 +27,12 @@ class ProductViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void clearProducts() {
+    _products.clear();
+    skipItems = 0;
+    notifyListeners();
+  }
+
   void updateProduct(Product oldProduct, Product newProduct) {
     final index = _products.indexOf(oldProduct);
     _products[index] = newProduct;
