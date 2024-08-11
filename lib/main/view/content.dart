@@ -42,7 +42,7 @@ class _ContentState extends State<Content> {
   void _loadMore() {
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
-      viewModel.skipItems += 5;
+      viewModel.skipItems += 10;
       viewModel.getData();
     }
   }
@@ -166,7 +166,7 @@ class MyHeaderDelegate extends SliverPersistentHeaderDelegate {
             title: progress > threshold
                 ? LocationButton(
                     isContrast: true,
-                    text: 'Japan`',
+                    text: 'Japan',
                     voidCallback: () => {
                           Fluttertoast.showToast(
                               msg: "Location 1",
