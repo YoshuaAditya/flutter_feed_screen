@@ -51,10 +51,12 @@ class ProductViewModel extends ChangeNotifier {
       if (res.statusCode == 200) {
         feedResponse = Feed.fromJson(json.decode(res.body));
         _products.addAll(feedResponse?.products as Iterable<Product>);
-        isLoading = false;
-        notifyListeners();
-      }
+      } 
+      isLoading = false;
+      notifyListeners();
     } catch (e) {
+      isLoading = false;
+      notifyListeners();
       debugPrint(e.toString());
     }
   }

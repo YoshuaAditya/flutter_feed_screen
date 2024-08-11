@@ -20,14 +20,8 @@ class Content extends StatefulWidget {
 }
 
 class _ContentState extends State<Content> {
-  final GlobalKey<NestedScrollViewState> globalKey = GlobalKey();
-  final List<Product> _list = [];
   final _scrollController = ScrollController();
   ProductViewModel viewModel = ProductViewModel();
-
-  final double collapsedBarHeight = 60.0;
-  final double expandedBarHeight = 400.0;
-  final double sliverPaddingBottom = 100.0;
 
   @override
   void initState() {
