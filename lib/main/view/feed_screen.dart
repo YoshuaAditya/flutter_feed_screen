@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/view/widgets/bottom_tab_bar.dart';
-import 'package:flutter_feed_screen/main/view/widgets/content.dart';
+import 'package:flutter_feed_screen/main/view/content.dart';
 
 import '../utils/constants.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/utils/assets.dart';
-import 'package:flutter_feed_screen/main/view/widgets/location_button.dart';
+import 'package:flutter_feed_screen/main/utils/utils_colors.dart';
+import 'package:flutter_feed_screen/main/view/widgets/button/location_button.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CollapsedAppBarContent extends StatelessWidget {
@@ -11,13 +12,19 @@ class CollapsedAppBarContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.green,
+        color: UtilsColors.mainGreen,
         child: Row(
           children: [
             const SizedBox(
               width: 10,
             ),
-            const LocationButton(),
+            LocationButton(
+              isContrast: false,
+              text: 'Japan',
+              voidCallback: () =>{
+                debugPrint("Location")
+              },
+            ),
             const Spacer(),
             const SizedBox(
               height: 40,

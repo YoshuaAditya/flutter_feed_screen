@@ -48,7 +48,9 @@ class TitleBar extends StatelessWidget {
         ),
         Align(
             alignment: Alignment.centerRight,
-            child: SvgPicture.asset(Assets.bookmark)),
+            child: IconButton(icon: SvgPicture.asset(Assets.bookmark), onPressed: () => {
+              debugPrint("Bookmark")
+            },)),
       ],
     );
   }

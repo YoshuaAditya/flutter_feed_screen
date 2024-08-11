@@ -3,9 +3,8 @@ import 'package:flutter_feed_screen/main/utils/assets.dart';
 import 'package:flutter_feed_screen/main/utils/text_styles.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LandmarksGrid extends StatelessWidget {
-
-  const LandmarksGrid({
+class FoodGrid extends StatelessWidget {
+  const FoodGrid({
     super.key,
     required this.index,
     required this.gridAxisCount,
@@ -40,12 +39,12 @@ class LandmarksGrid extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(Assets.landmark),
-                    const Text("Landmarks", style: TextStyles.p10),
+                    SvgPicture.asset(Assets.forkKnife),
+                    const Text("Food Categories", style: TextStyles.p10),
                   ],
                 ),
               )),
-          onTap: () => {debugPrint("Landmarks")}),
+          onTap: () => {debugPrint("Food")}),
     );
   }
 }

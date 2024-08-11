@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feed_screen/main/utils/colors.dart';
+import 'package:flutter_feed_screen/main/utils/utils_colors.dart';
 
 class TextStyles {
   static const TextStyle p0 = TextStyle(fontSize: 0);
@@ -18,4 +18,8 @@ class TextStyles {
       TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black );
   static const TextStyle tertiaryText =
       TextStyle(fontSize: 16, color: Colors.grey);
+  static const TextStyle contrastText =
+      TextStyle(color: Colors.white);
+  static const TextStyle blackText =
+      TextStyle(color: Colors.black);
 }
