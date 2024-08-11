@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/utils/assets.dart';
-import 'package:flutter_feed_screen/main/view/widgets/button/icon_text_button';
+import 'package:flutter_feed_screen/main/view/widgets/button/icon_text_button.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SocialBar extends StatelessWidget {
   final int comments;
@@ -21,8 +22,15 @@ class SocialBar extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: IconTextButton(
-            voidCallback: () =>{
-              debugPrint("Share")
+            voidCallback: () => {
+              Fluttertoast.showToast(
+                  msg: "Share",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.CENTER,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.white,
+                  fontSize: 16.0)
             },
             icon: SvgPicture.asset(Assets.share),
             text: "Share",
@@ -34,16 +42,30 @@ class SocialBar extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             const SizedBox(width: 10),
             IconTextButton(
-              voidCallback: () =>{
-                debugPrint("Comment")
+              voidCallback: () => {
+                Fluttertoast.showToast(
+                    msg: "Comment",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.grey,
+                    textColor: Colors.white,
+                    fontSize: 16.0)
               },
               icon: SvgPicture.asset(Assets.comment),
               text: "$comments",
             ),
             const SizedBox(width: 10),
             IconTextButton(
-              voidCallback: () =>{
-                debugPrint("Like")
+              voidCallback: () => {
+                Fluttertoast.showToast(
+                    msg: "Like",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.grey,
+                    textColor: Colors.white,
+                    fontSize: 16.0)
               },
               icon: SvgPicture.asset(Assets.like),
               text: "$likes",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/utils/assets.dart';
 import 'package:flutter_feed_screen/main/utils/text_styles.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class FoodGrid extends StatelessWidget {
   const FoodGrid({
@@ -22,12 +23,16 @@ class FoodGrid extends StatelessWidget {
                 border: Border(
                   left: BorderSide(
                     //                   <--- left side
-                    color: index % gridAxisCount != 0 ? Colors.grey : Colors.transparent,
+                    color: index % gridAxisCount != 0
+                        ? Colors.grey
+                        : Colors.transparent,
                     width: 1.5,
                   ),
                   top: BorderSide(
                     //                   <--- left side
-                    color: index >= gridAxisCount ? Colors.grey : Colors.transparent,
+                    color: index >= gridAxisCount
+                        ? Colors.grey
+                        : Colors.transparent,
                     width: 1.5,
                   ),
                 ),
@@ -44,7 +49,16 @@ class FoodGrid extends StatelessWidget {
                   ],
                 ),
               )),
-          onTap: () => {debugPrint("Food")}),
+          onTap: () => {
+                Fluttertoast.showToast(
+                    msg: "Food",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.grey,
+                    textColor: Colors.white,
+                    fontSize: 16.0)
+              }),
     );
   }
 }

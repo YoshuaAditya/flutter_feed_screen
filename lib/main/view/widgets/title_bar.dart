@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feed_screen/main/utils/assets.dart';
 import 'package:flutter_feed_screen/main/utils/text_styles.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class TitleBar extends StatelessWidget {
   final String title;
@@ -48,9 +49,19 @@ class TitleBar extends StatelessWidget {
         ),
         Align(
             alignment: Alignment.centerRight,
-            child: IconButton(icon: SvgPicture.asset(Assets.bookmark), onPressed: () => {
-              debugPrint("Bookmark")
-            },)),
+            child: IconButton(
+              icon: SvgPicture.asset(Assets.bookmark),
+              onPressed: () => {
+                Fluttertoast.showToast(
+                    msg: "Bookmark",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.grey,
+                    textColor: Colors.white,
+                    fontSize: 16.0)
+              },
+            )),
       ],
     );
   }

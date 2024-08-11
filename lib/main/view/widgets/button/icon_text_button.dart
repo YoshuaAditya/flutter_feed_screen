@@ -16,13 +16,10 @@ class IconTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return TextButton.icon(
-        icon: icon,
-        label: 
-            Text(text),
-        onPressed: () => {
-          voidCallback()
-        },
-      );
+    return TextButton.icon(
+      icon: icon,
+      label: Text(text),
+      onPressed: () => {voidCallback()},
+    );
   }
 }

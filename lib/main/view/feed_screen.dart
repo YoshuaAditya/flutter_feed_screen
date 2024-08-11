@@ -19,7 +19,6 @@ class _FeedScreenState extends State<FeedScreen> {
     super.initState();
   }
 
-
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
